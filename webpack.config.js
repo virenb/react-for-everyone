@@ -7,9 +7,12 @@ module.exports = {
     filename: 'app.js'
   },
   module: {
-    loader: [{
+    loaders: [{
       test: /\.jsx?$/,
-      loader: 'babel'
-    }]
+      loader: 'babel',
+      query:
+        {
+          presets:['react']
+        }    }]
   }
 };
